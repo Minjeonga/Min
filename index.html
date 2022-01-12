@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>포트폴리오</title>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/animation.css" type="text/css">
+        
+        <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap');
+
+            .nav-container{
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #2c2c54;
+                list-style-type: none;
+            }
+            .nav-item{
+                padding: 15px;
+                cursor:pointer;
+
+            }
+            .nav-item a{
+                text-align: center;
+                text-decoration: none;
+                color: white;
+            }
+
+            body {margin: 0;}
+            .full-screen {
+            width:100%;
+            height: 100vh;
+            }
+            .full-screen.white {background-color: #ffffff;}
+            .full-screen.black {background-color: #000000;}
+
+            *{
+                font-family: 'Jua', sans-serif;
+                
+            }
+            .container{
+                width: 100vw;
+                height: 100vh;           
+            }
+            .header_Teaser{
+                text-align: center;
+                color:black;
+            }
+            body {
+                font-family: "Montserrat";
+                color: #393f47;
+}
+            .Teaser{
+                display: block;
+                margin-top: 50px;
+                margin-bottom: 200px;
+            }
+            div{
+                display: inline-block;
+            }
+            .btn_wrap{
+                width: 500px;
+                margin: 0 auto;
+            }
+
+            .btn_wrap > a {
+            display: inline-block;
+            background: #2c2c54;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            margin: auto;
+            color:#fff;
+            border-radius: 0.5rem;
+            }
+            .btn_wrap > a:hover {
+                transform: scale(1.02);
+            }
+
+            .Teaser-job{ 
+                display: block;
+                font-size: 3.5rem;
+                font-weight: 900;
+                line-height: 150px;
+                font-family: "Montserrat";
+            
+            }
+            .profile{
+                background-color: #2c2c54;
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 100px;
+                
+            }
+           
+            .profile_left{
+                
+                position: relative;
+                float: left;
+                width: 50%;
+                height: 600px;
+                vertical-align: top;
+                overflow: hidden;
+            }
+            h3 {
+                padding-top: 30px;;
+                padding-bottom: 70px;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+            }
+            
+            .profile_right{
+                float: left;
+                width: 50%;
+            }
+            dl{
+                display: block;
+                list-style: none;
+                border: 0;
+            }
+            dl:nth-child(1){
+                transform: translateX(0);
+                opacity: 1;
+                transition: all 1s .8s;
+            }
+            .profile_right dl{
+                padding-left: 20px;
+                margin-bottom:40px;
+            }
+            .profile_right dl dt{
+                position: relative;
+                padding-top: 12px;
+                margin-bottom: 15px;
+                text-indent: 18px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .profile_right dl dt span{
+                display: block;
+                position: absolute;
+                top: 0px;
+                width: 9px;
+                height: 40px;
+                background-color: #f1f1f1;
+            }
+            .profile_right dd{
+                font-size: 20px;
+            }
+            .profile_right dl dd ::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                width: 5px;
+                height: 1px;
+                background-color: #393f47;
+            }
+
+            div.contents {
+                display: flex; 
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center; 
+                font-size: 1.2rem;
+                margin-top: 1rem;
+             }
+           
+            span.content_name {
+                display: block; 
+                font-size: 30px; 
+                text-align: left; 
+                width: 100%; 
+                padding-left: 30px;
+                padding-bottom: 30px;
+            }
+            .middle{
+                margin-left: 20px;
+                
+            }
+            div.contents {
+                display: flex; 
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center; 
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+            .key_skill {
+                font-size: 1.2rem;
+                color: #fff;
+                border-radius: 2rem;
+                padding: 0.4rem 0.9rem;
+                margin: 0.3rem 0.4rem;
+            }
+            .skill{
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 0px;
+            }
+            .skill_bar_wrap{
+                margin-left: 100px;
+                position: relative;
+                float: left;
+                
+                vertical-align: top;
+                overflow: hidden;
+            }
+            .skill_bar_wrap h3{
+                padding-top: 30px;;
+                padding-bottom: 70px;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold; 
+            }
+            .skill-text{
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                float: left;
+                width: 30%;
+                height: 800px;
+                overflow: hidden;
+                text-align:center;
+                 display:table-cell;
+                vertical-align:middle;
+            }
+           .skill-text p{
+               text-align: center;
+               font-weight: 500l;
+               font-size: 1.5rem;
+           }
+           .first-text{
+               margin-top: 10px;
+               margin-left: 180px;
+            }
+            
+            h4{
+                font-size: 2.5rem;
+                font-weight: 700;
+                font-family: 'Jua', sans-serif;
+            }
+
+            .skill-show{
+                width: 100%;
+                margin-bottom: 100px;
+                text-align: center;
+            }
+           .pm-name{
+               font-size: 15px;
+               margin-top: 10px;;
+               margin-bottom: 80px;
+           }
+           .skill-text1{
+            flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                float: left;
+                width: 30%;
+                height: 300px;
+                overflow: hidden;
+                text-align:center;
+                 display:table-cell;
+                vertical-align:middle;
+           }
+           .skill-img{
+               float: left;
+               width:50px;
+               height: 70px;
+           }
+          .show-progress{
+           
+           height: 100%;
+          }
+           .progressbar{
+                float: inline-start;
+                padding-right: 80px;
+                padding-bottom: 100px;
+                margin-bottom: 100px;
+            }
+            progress{
+                width: 100%;
+                height: 25px;
+               
+                box-sizing: border-box;
+                display: inline-block;
+                height: 1.5em;
+                width: 15em;
+                vertical-align: -0.2em;
+            }
+            .project{
+                display: block;
+                font-size: 3.5rem;
+                font-weight: 900;
+                line-height: 150px;
+                text-align: center;
+            }
+        </style>
+</head>
+        <body>
+            <!-- 메뉴바 -->
+            <nav>
+                <ul class="nav-container">
+                    <li class="nav-item">
+                        <a href="#1">Intro</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="#2">Profile</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="#3">Skill</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="#4">Project</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container">
+                <!-- 맨 윗부분 -->
+               <header class="header_Teaser">
+                   <div class="Teaser">
+                    <a name="1"></a>
+                       <!-- 내 직종  -->
+                       <div class="Teaser-job" >   
+                               안녕하세요 <br>
+                               저는 풀스택 개발자
+                               민정아입니다!
+                       </div>
+                       <!-- 사진 넣기 -->
+                           <img src="./img/com2.jpg" style="width: 180px; margin-bottom:50px; margin-top: -5px;">
+                           <br>
+                          
+                           <div class="btn_wrap">
+                               <a href='File2.zip' >Download Resume</a>
+                           </div>
+                   </div>
+               </header>
+                <!-- Introduce -->
+                <div class="profile">
+                    <a name="2"></a>
+                   <h3 style="color: #f1f1f1;">나의 프로필</h3>
+                     <!-- 내 사진 -->
+                    <div class="profile_left">
+                        <img src="./img/me.jpg" style="border: 3px solid wheat; border-radius: 20%;  width: 300px; margin-left:300px; background-size: cover; ">
+                    </div>
+                     <!-- 내 이름 및 비전 목표 -->
+                    <div class="profile_right">
+                       <dl style="color: #f1f1f1;">
+                           <dt style="color: #f1f1f1;">
+                               <span style="color: #f1f1f1;"></span>
+                               Profile
+                           </dt>
+                           <dd style="color: #f1f1f1;">
+                             - 민정아 | 풀스택 개발자
+                           </dd>
+                           <dd style="color: #f1f1f1;">
+                               - 2001. 06. 02
+                           </dd>
+                           <dd style="color: #f1f1f1;">
+                               - 광주광역시 북구 거주
+                           </dd>
+                           <dd style="color: #f1f1f1;">
+                               - jeonga420@naver.com
+                           </dd>
+                           <br>
+                           <dt style="color: #f1f1f1;">
+                               <span style="color: #f1f1f1;"></span>
+                               Edu
+                           </dt>
+                           <dd style="color: #f1f1f1;">
+                               - 호남대학교 소프트웨어학과 (2020. 03~)
+                           </dd>
+                           <dt style="color: #f1f1f1;">
+                            <span style="color: #f1f1f1;"></span>
+                            Awards
+                            </dt>
+                        <dd style="color: #f1f1f1;">
+                           AI 창업 아이디어 경진대회 우수상
+                        </dd>
+                       </dl>
+                       <div class="contents_sns">
+                           <div class="middle">
+                               <a class="snsbtn" href="https://github.com/Minjeonga" target="_blank">
+                                   <i class="fab fa-github"></i>
+                               </a>
+                               <a class="snsbtn" href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=act" target="_blank">
+                                   <i class="fab fa-google"></i>
+                               </a>
+                               <a class="snsbtn" href="https://ko-kr.facebook.com/" target="_blank">
+                                   <i class="fab fa-facebook-f"></i>
+                               </a>
+                               <a class="snsbtn" href="https://www.instagram.com/" target="_blank">
+                                   <i class="fab fa-instagram"></i>
+                               </a>
+                           </div>
+                       </div>
+                    </div> 
+               </div>
+
+               <div class="skill">
+                
+                   <h3>나의 소개</h3>
+                   <div class="skill-text">
+                       <img src="./img/cute.png" style="width:100px; margin-left:190px; ">
+                       <div class="first-text">
+                           <div style="border: 10px solid #2c2c54; padding: 20px; border-radius:10%; "  >
+                            <h4 style="margin-bottom: 0;">계기</h4>
+                            대학교를 와서 처음으로<br> 코딩을 접하며
+                            제 생에 <br>제일 열심히 한 분야가 되었습니다.<br>
+                            자바 언어로 '틀린그림찾기' <br>게임을 만들며
+                            백엔드에 대해<br> 더 공부하였습니다.<br>
+                            AI+X 캠프 활동통해 <br>HTML과 CSS에 대해<br>
+                            프론트엔드에 대해 관심도 깊어지며<br>
+                            풀스택 개발자로 <br>진로를 결정하게 되었습니다.<br>
+                            
+                           </div>
+                           
+                       </div>
+                   </div>
+                   <div class="skill-text">
+                       <img src="./img/goal.png" style="width:100px; margin-left:190px; ">
+                       <div class="first-text">
+                           <div style="border: 10px solid #2c2c54; border-radius:10%; padding: 20px;"><h4>목표</h4>
+                            예전에 코드를 짤 땐 정리도 안 되고<br>
+                            실행만 되면 좋은 코드라고 생각하여<br>
+                            코드를 짰었었다. 나의 목표는<br>
+                            코드를 책처럼 읽을 수 있게 깔끔한<br>
+                            코드를 짜는 사람이 되고 싶다.<br> </div>
+                           
+                          
+                       </div>
+                   </div>
+                   <div class="skill-text">
+                       <img src="./img/think.png" style="width:100px; margin-left:190px; ">
+                       <div class="first-text">
+                           
+                           <div  style="border: 10px solid #2c2c54; padding: 20px; border-radius:10%; ">
+                            <h4>비전</h4>
+                            개발자들이 함께 작업하고 싶은 개발자를 <br>
+                            뽑을 때 가장 먼저 생각나는 사람<br>
+                            혹은 제일 의지가 많이 됐던 사람으로<br>
+                            뽑히는 개발자, 그게 나의 진로의 비전이다.<br>
+                           </div>
+                        
+                       </div>
+                   </div>
+               </div>
+               <div class="main-skill">
+                   <div class="skill-show">
+                    <a name="3"></a>
+                       <h3>나의 역량</h3>
+                       <div class="skill-img">
+                           <!-- 사진 -->
+                           <table>
+                               <tr>
+                               <td>
+                                   <img alt="java" src="./img/java.png" style="width:100px; margin-left:220px; "/>
+                                   </td>
+                                   <td>
+                                       <img alt="c" src="./img/code.png" style="width:100px; margin-left:220px;  "/>
+                                   </td>
+                                   <td>
+                                       <img alt="html" src="./img/html.png" style="width:100px; margin-left:190px; " />
+                                   </td>
+                                   <td>
+                                       <img alt="css" src="./img/css.png" style="width:100px; margin-left:190px; "/>
+                                   </td>
+                               <tr>
+                           </table>
+                           </div>
+                       </div>
+                    </div>
+                   
+                       <div class="show-progress">
+                               <!-- 프로그레스바 -->
+                               <div class="progressbar" style="padding-left: 200px;">
+                                    <h4 class="skill-name" >JAVA </h4>
+
+                                   <progress value="90" max="100"></progress>
+                               </div>
+
+                               <div class="progressbar">
+                                   <h4 class="skill-name" >C</h4>
+                                   <progress value="80" max="100"></progress>
+                               </div>
+                               
+                               <div class="progressbar">
+                                   <h4 class="skill-name" >HTML</h4>
+                                   <progress value="80" max="100"></progress>
+                               </div>
+                               <div class="progressbar">
+                                   <h4 class="skill-name" >CSS</h4>
+                                   <progress value="70" max="100"></progress>
+                               </div>
+                       </div>
+
+               <div class="project">
+                   <!-- 프로젝트 -->
+                   <h3>나의 작품</h3>
+                    
+               </div>
+           </div>
+        </body>
+    
+</html>
